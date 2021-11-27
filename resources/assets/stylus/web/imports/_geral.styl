@@ -1,0 +1,142 @@
+$widthCampos = 10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,100
+
+.wrapper
+    margin 0 auto; padding 0 20px;
+    &:not(.flex)
+        clearfix()
+
+body, html
+	overflow-x hidden; background #fff;
+
+figure, picture
+	margin 0; padding 0; width 100%; height auto;
+	img
+		width 100%; display block;
+.flex
+    display flex;
+
+img
+    display block;
+
+form, .inputGroup, .fieldset, .table
+    display: flex; position relative; flex-flow row wrap; width 100%; align-items: center;
+
+    for $i in $widthCampos
+        ._{$i}
+            max-width unit($i, '%');
+
+.mx-datepicker
+    padding: 0 15px; margin-bottom: 15px; 
+    &.mx-datepicker-range
+        width 250px;
+    .mx-panel-date 
+        .today
+            color $httLaranja
+            &.actived
+                color #fff
+    .mx-calendar-content
+        .cell
+            &.inrange
+                background lighten($httLaranja, 90%)
+            &.actived
+                background: $httLaranja
+            &.disabled
+                background: #f3f3f3 !important;
+
+
+textarea
+    resize none; margin 0 15px 15px; padding rem(12) 15px; width 100%;
+    border 1px solid #ebebeb; font-size rem(16); transition all 0.2s ease-in-out
+    height 150px; outline 0;
+    &:focus
+        border 1px solid $httLaranja
+
+form
+    .fieldset
+        h3
+            color #2c2c2c; width 100%; margin 0 0 10px; padding 20px 15px;
+
+        &:not(:first-child)
+            margin-top 20px;
+
+
+.mainContent
+    width 100%;
+    > .content
+        height calc(100vh - 80px); overflow-y scroll;
+
+        
+
+.material-icons
+    font-size rem(40); color #fff; text-align center
+
+    + .label
+        font-size rem(10); line-height rem(8); color #fff; text-align center; text-transform uppercase; font-weight $font-medium;
+        display block;
+
+
+.tabelaListagem
+    width calc(100% - 30px); margin 0 15px;
+    .row
+        border-bottom: 1px solid #d7d7d7; display flex; position relative; transition all .15s ease-in-out;
+
+        .errorMessage
+            visibility hidden; opacity 0; user-select none; transition all .2s ease-in-out; position: absolute; bottom: 0; 
+            font-size: rem(12); left: 15px; color: #973937;
+            &.ativo
+                visibility visible; opacity 1; user-select all;
+
+        &.error
+            border-bottom-color #973937; background-color #FFF2F2
+
+        &:hover
+            background-color #eee;
+            &.error
+                background-color #FFEAEA
+
+.pageModule
+    padding vw(50) vw(20)
+    .material-icons
+        color #000;
+
+    header.page
+        padding vw(16) vw(16) 20px; border-bottom 2px solid rgba($httLaranja, 0.3); margin-bottom 20px;
+
+        h2 + .breadcrumb
+            margin-top vw(32);
+
++tablet-768()
+    form, .inputGroup, .fieldset, .table
+        for $i in $widthCampos
+            ._{$i}
+                max-width 50%;
+    .tabelaListagem
+        width: calc(100% - 8px);
+        margin: 0 4px;
+        .row
+            flex-flow: row wrap;
+    .buttons
+        flex-flow row wrap; max-width 100%;
+    .buscar
+        .input
+            max-width 100%;
+
++mobile-600()
+    form, .inputGroup, .fieldset, .table
+        for $i in $widthCampos
+            ._{$i}
+                max-width 100%;
+
+
+@media screen and (min-width: 600px)
+    #app
+        &.webkit
+            .mainContent 
+                .content 
+                    &::-webkit-scrollbar
+                        width: 10px; height: 10px;
+                    
+                    &::-webkit-scrollbar-thumb
+                        background $httAmarelo; 
+                    > section
+                        width calc(100% + 10px);

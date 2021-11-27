@@ -1,0 +1,51 @@
+@import '~_util'
+
+#mainHeader
+    height 80px; background $httLaranja; width 100%; position relative; box-shadow 0 0 10px 5px rgba(#000, .2); z-index: 10;
+    .wrapper
+        justify-content space-between; padding 0 20px; width 100%; align-items: center; height 100%;
+    .nav
+        align-items center; position relative; height 100%;
+    .dropdownUser
+        position absolute; top 100%; right -20px; width calc(100% + 20px); background $httLaranja;
+        box-shadow 0 5px 10px 5px rgba(#000, .2);
+
+        li
+            padding 10px 0; transition all .2s ease-in-out;
+            a
+                width 100%; height 100%; display block; padding 0 10px;
+            &:hover
+                background-color darken($httLaranja, 15%);
+
+        .material-icons
+            font-size rem(32); line-height rem(32); vertical-align middle;
+        span
+            font-size rem(16); line-height rem(16); color #fff; vertical-align middle;
+
+    .user
+        display flex; align-items center; cursor pointer;
+        time
+            margin-right 5px;
+        p
+            &:not(:last-child)
+                margin-right 5px;
+
+            &.ultimoAcesso
+                font-size rem(12)
+
+            &.nomeUser
+                font-weight $font-bold; text-transform uppercase; position relative; font-size rem(14);
+
+        .info
+            text-align right; color #fff;
+
+        button
+            background none; border none; padding 0; margin 0; cursor pointer; outline 0;
+
+    .menu
+        background none; border none; padding 0; outline 0; cursor pointer;
+
+    .sair
+        display flex; flex-flow row wrap;
+        i, span
+            width 100%;

@@ -1,0 +1,53 @@
+// Variáveis e Mixins
+@import '~_util'
+p
+    padding 10px 15px; width 100%;
+.campo
+    width 100%; display flex; align-items flex-start; 
+    &.faixas
+        flex-flow row wrap; padding 0 20px;
+    p
+        &:first-child
+            width 30%;   
+        &.faixa
+            width 100%
+    &.text
+        flex-flow row wrap; 
+
+
+h3
+    font-size rem(18)
+h4
+    font-size rem(16); margin 0 0 10px; padding 20px 15px; width 100%;
+
+.fieldset
+    &:not(:last-child)
+        border-bottom 1px solid rgba(#000, 0.08); padding 10px 0;
+    > .fieldset
+        padding 0 10px;
+
+.arquivos
+    justify-content: space-between; width 100%; flex-flow row wrap;
+    .arquivo
+        max-width 30%; padding 15px; box-shadow 0 0 10px 10px rgba(#000, 0); transition all .2s ease-in-out; margin 15px; cursor pointer;
+        img
+            width 40px; margin 0 auto; margin-bottom 15px;
+        p
+            font-size rem(14)
+        &:hover
+            box-shadow 0 0 10px 10px rgba(#000, 0.04)
+
+textarea
+    resize none; margin 0 15px 15px; padding rem(12) 15px; width 100%;
+    border 1px solid #ebebeb; font-size rem(16); transition all 0.2s ease-in-out
+    height 150px; outline 0;
+    &:focus
+        border 1px solid $httLaranja
+
+.auditoriaTipo
+    justify-content: space-around; width: 100%;
+    .bolinha
+        width 50px; height 50px; border-radius 50%; background #ccc; border 1px solid #aaa; margin 0 auto;
+    .atual
+        .bolinha
+            background $httLaranja; border 1px solid darken($httLaranja, 30%)

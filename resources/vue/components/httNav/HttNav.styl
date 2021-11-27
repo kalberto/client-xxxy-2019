@@ -1,0 +1,49 @@
+// Variáveis e Mixins
+@import '~_util'
+
+#asideNav
+	max-width 300px; width 100%; background #ccc; height 100vh; transition all 0.2s ease-in-out; overflow hidden; position relative; z-index 1;
+	&.asideClose
+		max-width 80px;
+		.logo
+			padding 10px 10px; width auto;
+			svg
+				#horizon
+					opacity: 0; visibility hidden
+		nav
+			a
+				padding 10px 25px;
+				span
+					width 0;
+
+
+	.logo
+		width: 100%; padding 20px 10px 30px; background #fff; transition all 0.3s ease-in-out; min-height 72px;
+		
+		h1
+			color transparent; font 0/0 a; line-height 0; height 0; 
+		svg
+			width 260px
+			#horizon
+				width 100%; opacity: 1; visibility visible; transition all 0.2s ease-in-out;
+		
+
+	nav
+		padding 75px 0 0;
+		a
+			display flex; padding 10px 15px; font-size rem(20px); align-items center;
+			.icone
+				width 50px;
+				img
+					height: 30px; margin: 0 auto;
+			span
+				margin-left 10px; width 100%; transition all 0.2s ease-in-out; overflow hidden
+
++desktop-1024()
+	#asideNav
+		position: fixed; top: 80px; left 0; height: calc(100vh - 80px); overflow-x hidden; overflow-y scroll 
+		&.asideClose
+			max-width 0px;
+		nav
+			padding 5px 0 0;
+

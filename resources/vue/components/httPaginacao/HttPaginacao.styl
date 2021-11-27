@@ -1,0 +1,31 @@
+// Variáveis e Mixins
+@import '~_util'
+
+.paginacao
+    justify-content: space-between; padding 50px 15px; align-items: center; flex-flow row wrap;
+
+    .total
+        font-size rem(15); color rgba(#000, .7);
+
+    .paginas
+        button
+            border 1px solid $httLaranja; font-size rem(20); background transparent; border-radius 2px; outline 0; cursor pointer;
+            transition all .2s ease-in-out; color rgba(#000, .7); height 26px; width 26px; margin 0 5px; line-height rem(20);
+            text-align center; padding 0 0 2px; appearance none;
+            &:not(:disabled)
+                &:hover
+                    background $httLaranja; color #fff;
+            &:last-child
+                margin-right 0;
+            &:disabled
+                border-color #d1d1d1; cursor default;
+        
+        span
+            font-size rem(15); color rgba(#000, .7); min-width 26px; display inline-block; text-align center; font-weight $font-black;
+            margin 0 5px
+
++mobile-600()
+    .paginacao
+        justify-content: center;
+        .total
+            margin-bottom 10px;

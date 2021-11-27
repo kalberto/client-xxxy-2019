@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.10.0.final using JasperReports Library version 6.10.0-unknown  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="numeracao" pageWidth="559" pageHeight="23" columnWidth="559" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="7a8139d0-161f-4356-bb28-916cd9b782cf">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="JSON"/>
+	<queryString language="JSON">
+		<![CDATA[venda.voz]]>
+	</queryString>
+	<field name="portado" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="portado"/>
+		<fieldDescription><![CDATA[portado]]></fieldDescription>
+	</field>
+	<field name="inicial" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="inicial"/>
+		<fieldDescription><![CDATA[inicial]]></fieldDescription>
+	</field>
+	<field name="final" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="final"/>
+		<fieldDescription><![CDATA[final]]></fieldDescription>
+	</field>
+	<field name="operadora_doadora" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="operadora_doadora"/>
+		<fieldDescription><![CDATA[operadora_doadora]]></fieldDescription>
+	</field>
+	<field name="faixa" class="java.lang.String"/>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<frame>
+				<reportElement x="0" y="1" width="559" height="22" uuid="41029aa0-4688-420a-8ef8-3f13316814bd">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<staticText>
+					<reportElement x="46" y="0" width="26" height="19" uuid="86aefcc0-e202-4684-bca5-6799d1cf5201">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="9"/>
+					</textElement>
+					<text><![CDATA[Inicial]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="74" y="0" width="80" height="19" uuid="be216467-e275-443a-9cd6-88f9fee994bf">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3081c9b5-e0ac-4ed0-b00a-f19d97750091"/>
+						<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="1.0"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif"/>
+						<paragraph lineSpacing="Single" lineSpacingSize="1.0" leftIndent="3"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{inicial}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="157" y="0" width="26" height="19" uuid="fa997adb-2675-48f4-9c39-fbeae4b8c1a6">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="9"/>
+					</textElement>
+					<text><![CDATA[Final]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="186" y="0" width="80" height="19" uuid="5ce712ec-303d-4505-89ca-c942615a4520">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3081c9b5-e0ac-4ed0-b00a-f19d97750091"/>
+						<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="1.0"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif"/>
+						<paragraph lineSpacing="Single" lineSpacingSize="1.0" leftIndent="3"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{final}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="266" y="0" width="42" height="19" uuid="f8c4716b-24f7-4c54-9cae-76a4cd10c63f">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="9"/>
+					</textElement>
+					<text><![CDATA[Portado]]></text>
+				</staticText>
+				<textField>
+					<reportElement mode="Transparent" x="308" y="1" width="19" height="16" uuid="d52bbbef-89d1-4d05-bc94-90732cf02197">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="net.sf.jasperreports.style.backcolor" value="#FFFFFF"/>
+						<property name="net.sf.jasperreports.consume.space.on.overflow" value="true"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="1.0"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Justified" rotation="Left">
+						<font fontName="SansSerif" size="15" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{portado}.compareTo("sim") == 0 ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="330" y="0" width="20" height="19" uuid="5e539885-0056-4918-8af8-c4b09e53a0f7">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="9"/>
+					</textElement>
+					<text><![CDATA[Sim]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="377" y="0" width="20" height="19" uuid="49a72a72-90ab-47a7-a727-759581db131a">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="9"/>
+					</textElement>
+					<text><![CDATA[Não]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="450" y="0" width="90" height="19" uuid="f221eff3-23ef-46e8-a086-ce9257bb738b">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3081c9b5-e0ac-4ed0-b00a-f19d97750091"/>
+						<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="1.0"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="SansSerif"/>
+						<paragraph lineSpacing="Single" lineSpacingSize="1.0" leftIndent="3"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{portado}.compareTo("sim") == 0 ? $F{operadora_doadora} : ""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement mode="Transparent" x="355" y="1" width="19" height="16" uuid="aa354bd1-3950-4e71-9341-f09d228698a8">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="net.sf.jasperreports.style.backcolor" value="#FFFFFF"/>
+						<property name="net.sf.jasperreports.consume.space.on.overflow" value="true"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="1.0"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Justified" rotation="Left">
+						<font fontName="SansSerif" size="15" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{portado}.compareTo("sim") != 0 && $F{portado}.compareTo("") != 0 ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement x="8" y="0" width="38" height="19" uuid="62d22028-b8ea-42a6-a1cd-104585221d97">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3081c9b5-e0ac-4ed0-b00a-f19d97750091"/>
+						<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.0"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="9"/>
+						<paragraph lineSpacing="Single" lineSpacingSize="1.0" leftIndent="3"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{faixa}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="399" y="-1" width="50" height="22" uuid="8c8f81f7-e66e-48c2-9b44-c7139cdccb64">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<text><![CDATA[Operadora Doadora]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</detail>
+</jasperReport>

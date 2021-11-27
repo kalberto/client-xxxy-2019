@@ -1,0 +1,46 @@
+// Variáveis e Mixins
+@import '~_util'
+
+@keyframes animateLoader
+	0%
+		background rgba(#e75629, 0);
+	50%
+		background rgba(#e75629, 1)
+
+#downloadRelatorio
+	position fixed; top 120px; right 45px; box-shadow 0 0 10px 5px rgba(#000, .15);
+	padding 20px 10px; text-align center; background #fff; z-index 9; width 300px;
+
+	.fechar
+		position absolute; top -15px; right -15px; width 30px; height 30px; background $httLaranja; border-radius 50%; display flex;
+		img
+			width: 15px; margin: 0 auto;
+
+	.mensagem
+		margin-bottom 15px; font-size rem(16); line-height rem(24)
+
+	.botao
+		font-size rem(16); color $httLaranja;
+		a
+			display flex; justify-content center; align-items center;
+		.baixar
+			height 20px; margin-right 10px;
+
+	.loader
+		display flex; align-items center; justify-content center;
+		.load
+			display flex; justify-content space-between; width 60px;
+			i
+				width 15px; height 15px; border-radius 50%; background rgba(#e75629, 0); 
+				animation: animateLoader 3.5s linear infinite alternate;
+				&:nth-child(1)
+					animation-delay 0
+				&:nth-child(2)
+					animation-delay 0.66s
+				&:nth-child(3)
+					animation-delay 1.2s
+
+	&.modalFade-enter-active, &.modalFade-leave-ative
+		transition all 0.5s ease-in-out; 
+	&.modalFade-enter, &.modalFade-leave-to
+		opacity 0; visibility hidden; z-index -1;

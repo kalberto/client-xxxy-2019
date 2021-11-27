@@ -1,0 +1,30 @@
+// Variáveis e Mixins
+@import '~_util'
+
+textarea
+    resize none; margin 0 15px 15px; padding rem(12) 15px; width 100%;
+    border 1px solid #ebebeb; font-size rem(16); transition all 0.2s ease-in-out
+    height 150px; outline 0;
+    &:focus
+        border 1px solid $httLaranja
+
+.verifyCliente
+    align-items: flex-end; flex-direction column; justify-content center;
+    p
+        padding: 0 15px;
+
+    .message
+        visibility hidden; opacity 0; user-select none; transition all .2s ease-in-out; position: absolute; top: -20px; font-size: rem(12);
+        right: 15px; white-space nowrap;
+
+    &.error, &.success
+        .message
+            visibility visible; opacity 1; user-select all;
+
+    &.error
+        .message
+            color: #C00;
+
+    &.success
+        .message
+            color: #090;

@@ -1,0 +1,28 @@
+// Variáveis e Mixins
+@import '~_util'
+
+.column
+    padding: 30px 18px; position relative; width 100%; align-self center;
+    &:last-child
+        padding-right 0;
+    &:not(:first-child)
+        &:before 
+            content: ""; position: absolute; top: 50%; left: 0; display: block; width: 1px; height: 50%; 
+            background: #dfdfdf; transform: translateY(-50%)
+    
+    .columnName
+        color $httLaranja; font-weight bold; font-size 12px; display block;
+    &:not(.actions) >>> *
+        &:not(.columnName)
+            color #3a3a3a; font-size 18px;
+
++desktop-1024()
+    .column
+        width 50%; padding 5px 10px;
+        &:not(:first-child)
+            &:before 
+                content none;
+
++mobile-600()
+    .column
+        width 100%;

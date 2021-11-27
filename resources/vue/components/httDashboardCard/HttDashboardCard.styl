@@ -1,0 +1,38 @@
+@import '~_util'
+
+.card
+    vw(width, 340); box-shadow 0 5px 10px rgba(#ebebeb, 1); vw(padding, 20); vw(margin-bottom, 30); vw(margin-right, 30); 
+    display flex; justify-content space-around; flex-flow row wrap; align-items center; position relative;
+    &:before
+        content ''; position absolute; width 1px; height 50%; background rgba($httLaranja, 0.3); left 50%; transform translateX(-50%);
+        top 40%; 
+    a
+        display block; width 100%;
+    h3
+        vw(font-size, 18); color #000; vw(margin-bottom, 35); text-align center; vw(line-height, 40); 
+        width 100%; 
+    .img
+        vw(margin-bottom, 15);
+        img
+            vw(height, 72); margin 0 auto;
+    span
+        display block; vw(font-size, 25); text-align center;
+    
++desktop-1024()
+    .card
+        width calc(50% - 20px); margin-right 20px
+
++mobile-600()
+    .card
+        width 100%; margin-right 0;
+        h3
+            vw(line-height, 25); 
+
+
+ +iphone-5()
+    .card
+        .img
+            width 100%;
+        &:before
+            content none;
+    

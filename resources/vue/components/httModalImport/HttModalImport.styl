@@ -1,0 +1,40 @@
+@import '~_util'
+aside#modalImport
+    width 100%; height 100vh; background rgba(#000, 0.5); position fixed; top 0; left 0; opacity 1; visibility visible;
+    z-index: 10; backdrop-filter grayscale(75%) contrast(75%); 
+    .import
+        background #fff; height 70vh; width 70vw; position absolute; top 50%; left 50%; transform translate(-50%, -50%);
+        border-radius 10px; padding 40px 40px; 
+        label
+            width 100%; height 70%; border 1px solid $httLaranja; display flex; align-items center; justify-content center;
+            position relative; cursor pointer;
+            input
+                display none;
+        span
+            margin-top 10px; font-size rem(16); display block; vertical-align middle;
+            img
+                width 50px; margin 0 20px; display inline; vertical-align middle;
+        .checkingProgress, .uploadProgress
+            width 100%; background #ccc; border-radius 50px;
+            div
+                width 0; height 15px; border-radius 50px; background $httLaranja
+        .button
+            margin-top 15px; margin-bottom 0;
+        a.fechar
+            position absolute; right 0px; top -35px;
+            img
+                width 30px;
+    .botoes
+        align-items center; 
+        span 
+            color #800
+    .errors
+        position absolute; left 0; top 0; width 100%; height 100%; background #fff; overflow-y scroll;
+        ul
+            width: 100%; height: 100%; padding: 40px;
+            li
+                margin: 10px 0; padding: 10px; border-bottom: 1px solid #ccc; background: #eee; 
+    &.modalFade-enter-active, &.modalFade-leave-ative
+        transition all 0.5s ease-in-out; 
+    &.modalFade-enter, &.modalFade-leave-to
+        opacity 0; visibility hidden; z-index -1;
